@@ -107,6 +107,7 @@
 						<h2> 3. Understand related needs </h2>
 						<p><span class="fragment"> Monitoring, logging, auditing </p>
 						<p><span class="fragment"> Notifications, status queries </span> </p>
+						<p><span class="fragment"> Accounts/IDs required across domains </span> </p>
 					</section>
 
 				</section>
@@ -115,8 +116,85 @@
 
 					<section>
 						<h2> Tools </h2>
-						<p><span class="fragment"> </p>
-						<p><span class="fragment"> Notifications, status queries </span> </p>
+						<p><span class="fragment"> A review of some tools worth considering </span> </p>
+						<p><span class="fragment"> Some old standbys, some new interesting tools </span> </p>
+					</section>
+
+					<section>
+						<h2> The best Tool: SET </h2>
+						<p><span class="fragment"> NCSA Storage Group </span> </p>
+						<p><span class="fragment"> Well over 100 years cumulative experience </span> </p>
+						<p><span class="fragment"> Experience on a wide variety of challenging transfer projects</span> </p>
+						<p><span class="fragment"> </span> </p>
+					</section>
+
+					<section>
+						<h2> Minio </h2>
+						<p><span class="fragment"> S3-based object server (over posix FS) - high performance </span> </p>
+						<p><span class="fragment"> Supports clustered erasure-code storage for reliability</span> </p>
+						<p><span class="fragment"> Single-file deploy, no admin requirement</span> </p>
+						<p><span class="fragment"> Web interface, CLI, and API, integrates with OAuth/JWT </span> </p>
+						<p><span class="fragment"> High performance, modern multicore implementation</span> </p>
+					</section>
+
+					<section>
+						<h2> Tools: Globus </h2>
+						<p><span class="fragment"> Service-oriented, "managed" transfers</span> </p>
+						<p><span class="fragment"> Retries failed transfers </span> </p>
+						<p><span class="fragment"> Requires admin at each endpoint, nontrivial setup</span> </p>
+						<p><span class="fragment"> Web, CLI, API(python), queryable transfer state, limited logging</span> </p>
+						<p><span class="fragment"> Performance issues with large #'s of small files</span> </p>
+					</section>
+
+					<section>
+						<h2> Tools: GIT </h2>
+						<p><span class="fragment"> Merkel-tree based versioned distributed file sharing </span> </p>
+						<p><span class="fragment"> Differential updates, multi-site sharing</span> </p>
+						<p><span class="fragment"> Good up to ~10GB of text-based data </span> </p>
+						<p><span class="fragment"> Optional new line protocol is very efficient </span> </p>
+						<p><span class="fragment"> CLI, ssh-based auth and transport </span> </p>
+					</section>
+
+					<section>
+						<h2> Tools: rsync </h2>
+						<p><span class="fragment"> Service and/or ad-hoc transfers, highly configurable </span> </p>
+						<p><span class="fragment"> Can use ssh transport/keys</span> </p>
+						<p><span class="fragment"> Copy or sync, push or pull</span> </p>
+						<p><span class="fragment"> Supports reliability, differential updates</span> </p>
+						<p><span class="fragment"> CLI only, for fine-grained logging</span> </p>
+					</section>
+
+					<section>
+						<h2> Tools: minio  </h2>
+						<p><span class="fragment"> S3-based object server (over posix FS) - high performance </span> </p>
+						<p><span class="fragment"> Supports clustered erasure-code storage for reliability</span> </p>
+						<p><span class="fragment"> Single-file deploy, no admin requirement</span> </p>
+						<p><span class="fragment"> Web interface, CLI, and API, integrates with OAuth/JWT </span> </p>
+						<p><span class="fragment"> High performance, modern multicore implementation</span> </p>
+					</section>
+
+				</section>
+
+				</section>
+
+					<section>
+						<h2> New Tools: IPFS </h2>
+						<p><span class="fragment"> Merkle-tree (content) based, distributed file sharing</span> </p>
+						<p><span class="fragment"> Operates offline, resync when online </span> </p>
+						<p><span class="fragment"> High reliability, parallel sharding, at the expense of performane </span> </p>
+						<p><span class="fragment"> CLI, API, fuse-mountable interfaces</span> </p>
+					</section>
+
+				</section>
+
+				<section>
+
+					<section>
+						<h2> </h2>
+						<p><span class="fragment"> Merkle-tree (content) based, distributed file sharing</span> </p>
+						<p><span class="fragment"> Operates offline, resync when online </span> </p>
+						<p><span class="fragment"> High reliability, parallel sharding, at the expense of performane </span> </p>
+						<p><span class="fragment"> CLI, API, fuse-mountable interfaces</span> </p>
 					</section>
 
 
