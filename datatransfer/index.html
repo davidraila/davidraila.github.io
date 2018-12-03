@@ -88,7 +88,7 @@
 				<section>
 
 					<section>
-						<h1> What you need to know </h1>
+						<h1> What is necessary </h1>
 					</section>
 					
 					<section>
@@ -120,14 +120,14 @@
 				<section>
 
 					<section>
-						<h1> What is good to know and do </h1>
+						<h1> What is recommended </h1>
 						<p><span class="fragment"> Weakest link problem </span> </p>
 						<p><span class="fragment"> Defaults are often poor choices</span> </p>
 						<p><span class="fragment"> Can have huge performance impact - throughput and latency </span> </p>
-						<p><span class="fragment"> Simple to do from the start </span> </p>
+						<p><span class="fragment"> Simple to do from the start, harder later </span> </p>
+						<p><span class="fragment"> Get help if you need </span> </p>
 					</section>
-					</section>
-					
+
 					<section>
 						<h2> OS Environment, platform optimize for I/O throughput  </h2>
 						<p><span class="fragment"> Use a good OS, huge impact - linux v3/v4 </span> </p>
@@ -135,6 +135,7 @@
 						<p><span class="fragment"> Disable all the default junk - you don't need Xwin and cups, etc.</span> </p>
 						<p><span class="fragment"> Minimize latency - VMs and containers/clusters suffer</span> </p>
 					</section>
+
 					<section>
 						<h2> Filesystems and Network </h2>
 						<p><span class="fragment"> Use a good FS and tune.   XFS and tuned  </p>
@@ -146,13 +147,33 @@
 				<section>
 
 					<section>
-						<h2> Tools </h2>
-						<p><span class="fragment"> A review of some tools worth considering </span> </p>
-						<p><span class="fragment"> Some old standbys, some new interesting tools </span> </p>
+						<h1> For developers </h1>
+						<p><span class="fragment"> Things to make your life easier </span> </p>
 					</section>
 
 					<section>
-						<h2> The best Tool: SET </h2>
+						<h2> Monitor/log/metrics from the start </h2>
+						<p><span class="fragment"> Really hard to do later </span> </p>
+						<p><span class="fragment"> You can observe a lot by just watching ... </span> </p>
+						<p><span class="fragment"> Great tools for the taking, all in containers for quick tests: </span> </p>
+						<p><span class="fragment"> Greylog, prometheus for logs/metrics. </span> </p>
+						<p><span class="fragment"> ID integration/brokering - Keycloak </span> </p>
+						<p><span class="fragment"> Automate:  Jenkins, ansible, etc. </span> </p>
+					</section>
+
+				</section>
+
+				<section>
+
+					<section>
+						<h1> Transfer Tools tour </h1>
+						<p><span class="fragment"> A spectrum of tools and attributes worth considering</span> </p>
+						<p><span class="fragment"> Some old standbys, some new things, some surprises </span> </p>
+						<p><span class="fragment"> Many ssh based, some server-style, and non-TCP alternatives</span> </p>
+					</section>
+
+					<section>
+						<h2> First: The best Tool: SET </h2>
 						<p><span class="fragment"> NCSA Storage Group </span> </p>
 						<p><span class="fragment"> Well over 100 years cumulative experience </span> </p>
 						<p><span class="fragment"> Experience on a wide variety of challenging transfer projects</span> </p>
@@ -160,7 +181,7 @@
 					</section>
 
 					<section>
-						<h2> Minio </h2>
+						<h2> Minio S3 compatible object server</h2>
 						<p><span class="fragment"> S3-based object server (over posix FS) - high performance </span> </p>
 						<p><span class="fragment"> Supports clustered erasure-code storage for reliability</span> </p>
 						<p><span class="fragment"> Single-file deploy, no admin requirement</span> </p>
@@ -169,12 +190,12 @@
 					</section>
 
 					<section>
-						<h2> Tools: Globus </h2>
+						<h2> Globus </h2>
 						<p><span class="fragment"> Service-oriented, "managed" transfers</span> </p>
 						<p><span class="fragment"> Retries failed transfers </span> </p>
 						<p><span class="fragment"> Requires admin at each endpoint, nontrivial setup</span> </p>
 						<p><span class="fragment"> Web, CLI, API(python), queryable transfer state, limited logging</span> </p>
-						<p><span class="fragment"> Performance issues with large #'s of small files</span> </p>
+						<p><span class="fragment"> Performance issues with large #'s of small files - repackage your data in 1GB chunks</span> </p>
 					</section>
 
 					<section>
@@ -187,33 +208,28 @@
 					</section>
 
 					<section>
-						<h2> Tools: rsync </h2>
+						<h2> Tools: rsync - the standard for distributing large file repos </h2>
 						<p><span class="fragment"> Service and/or ad-hoc transfers, highly configurable </span> </p>
 						<p><span class="fragment"> Can use ssh transport/keys</span> </p>
 						<p><span class="fragment"> Copy or sync, push or pull</span> </p>
 						<p><span class="fragment"> Supports reliability, differential updates</span> </p>
 						<p><span class="fragment"> CLI only, for fine-grained logging</span> </p>
+						<p><span class="fragment"> Extremely efficient</span> </p>
 					</section>
 
 					<section>
-						<h2> Tools: minio  </h2>
-						<p><span class="fragment"> S3-based object server (over posix FS) - high performance </span> </p>
-						<p><span class="fragment"> Supports clustered erasure-code storage for reliability</span> </p>
-						<p><span class="fragment"> Single-file deploy, no admin requirement</span> </p>
-						<p><span class="fragment"> Web interface, CLI, and API, integrates with OAuth/JWT </span> </p>
-						<p><span class="fragment"> High performance, modern multicore implementation</span> </p>
+						<h2> UPS, snowball, snowmobile - no TCP required </h2>
+						<p><span class="fragment"> Copy data and ship it - planes are faster than networks</span> </p>
+						<p><span class="fragment"> Overcomes poor networks, firewalls, isolated data </span> </p>
 					</section>
 
-				</section>
-
-				</section>
-
 					<section>
-						<h2> New Tools: IPFS </h2>
+						<h2> IPFS - the inter planetary filesystem </h2>
 						<p><span class="fragment"> Merkle-tree (content) based, distributed file sharing</span> </p>
 						<p><span class="fragment"> Operates offline, resync when online </span> </p>
 						<p><span class="fragment"> High reliability, parallel sharding, at the expense of performane </span> </p>
 						<p><span class="fragment"> CLI, API, fuse-mountable interfaces</span> </p>
+						<p><span class="fragment"> All implemented as libraries with APIs - if you wish to use subcomponents</span> </p>
 					</section>
 
 				</section>
