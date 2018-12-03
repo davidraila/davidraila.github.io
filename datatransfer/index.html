@@ -6,7 +6,7 @@
 
 		<title>Data Transfer</title>
 
-		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="description" content="NCSA Software Group Talk">
 		<meta name="author" content="David Raila - Storage Group NCSA - BlueWaters">
 
 		<meta name="apple-mobile-web-app-capable" content="yes">
@@ -41,12 +41,6 @@
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
 				<section>
-					<h2>Introduction</h2>
-					<p class="fragment">What's the best transfer system?</p>
-					<p class="fragment">50GB logs per day, 300M log lines</p>
-				</section>
-
-				<section>
 					<h2> Content </h2>
 					<p><span class="fragment"> Vernacular and definitions</span> </p>
 					<p><span class="fragment"> Patterns and Strategies </span> </p>
@@ -55,16 +49,27 @@
 				</section>
 
 				<section>
-						<h2>From 50GB of</h2>
-						<small "style=text-align:left" >
-Oct 11 03:58:42 hpss12 globus-gridftp-server[45623]: dsi[../../../source/module/dsi.c:117]dsi_init: GridFTP HPSS DSI 2.4:  COMMIT: log level 3
-Oct 11 03:58:43 hpss12 globus-gridftp-server[45623]: Transfer stats: DATE=20171011085843.469040 HOST=hpss-md12.ncsa.illinois.edu PROG=globus-gridftp-server NL.EVNT=FTP_INFO START=20171011085842.725508 USER=liska SHARE=0 SHAREE=none FILE="/u/sciteam/liska/project.bady/07042017/TDISKS25A93T45S/dumps515/new_dumpdiag11" BUFFER=87380 BLOCK=262144 NBYTES=311040000 VOLUME=/ STREAMS=1 STRIPES=1 DEST=[141.142.176.66] TYPE=RETR CODE=226 TASKID=97b43ee2-ae0f-11e7-afcf-22000a92523b retrans=0
-Oct 11 03:58:45 hpss12 globus-gridftp-server[45623]: Transfer stats: DATE=20171011085845.011820 HOST=hpss-md12.ncsa.illinois.edu PROG=globus-gridftp-server NL.EVNT=FTP_INFO START=20171011085844.313072 USER=liska SHARE=0 SHAREE=none FILE="/u/sciteam/liska/project.bady/07042017/TDISKS25A93T45S/dumps523/new_dumpdiag6" BUFFER=87380 BLOCK=262144 NBYTES=311040000 VOLUME=/ STREAMS=1 STRIPES=1 DEST=[141.142.176.66] TYPE=RETR CODE=226 TASKID=97b43ee2-ae0f-11e7-afcf-22000a92523b retrans=0
-Oct 11 03:58:46 hpss12 globus-gridftp-server[45623]: Transfer stats: DATE=20171011085846.564444 HOST=hpss-md12.ncsa.illinois.edu PROG=globus-gridftp-server NL.EVNT=FTP_INFO START=20171011085845.837304 USER=liska SHARE=0 SHAREE=none FILE="/u/sciteam/liska/project.bady/07042017/TDISKS25A93T45S/dumps524/new_dumpdiag6" BUFFER=87380 BLOCK=262144 NBYTES=311040000 VOLUME=/ STREAMS=1 STRIPES=1 DEST=[141.142.176.66] TYPE=RETR CODE=226 TASKID=97b43ee2-ae0f-11e7-afcf-22000a92523b retrans=0
-Oct 11 03:58:48 hpss12 globus-gridftp-server[45623]: Transfer stats: DATE=20171011085848.028754 HOST=hpss-md12.ncsa.illinois.edu PROG=globus-gridftp-server NL.EVNT=FTP_INFO START=20171011085847.391681 USER=liska SHARE=0 SHAREE=none FILE="/u/sciteam/liska/project.bady/07042017/TDISKS25A93T45S/dumps529/new_dumpdiag11" BUFFER=87380 BLOCK=262144 NBYTES=311040000 VOLUME=/ STREAMS=1 STRIPES=1 DEST=[141.142.176.66] TYPE=RETR CODE=226 TASKID=97b43ee2-ae0f-11e7-afcf-22000a92523b retrans=0
-Oct 11 03:58:49 hpss12 globus-gridftp-server[45623]: Transfer stats: DATE=20171011085849.599464 HOST=hpss-md12.ncsa.illinois.edu PROG=globus-gridftp-server NL.EVNT=FTP_INFO START=20171011085848.890210 USER=liska SHARE=0 SHAREE=none FILE="/u/sciteam/liska/project.bady/07042017/TDISKS25A93T45S/dumps529/new_dumpdiag12" BUFFER=87380 BLOCK=262144 NBYTES=311040000 VOLUME=/ STREAMS=1 STRIPES=1 DEST=[141.142.176.66] TYPE=RETR CODE=226 TASKID=97b43ee2-ae0f-11e7-afcf-22000a92523b retrans=0
-Oct 11 03:58:50 hpss12 xinetd[11582]: EXIT: gsiftp status=0 pid=45623 duration=8(sec)
-					</small>
+					<section>
+						<h2> Data Transfer </h2>
+						<p><span class="fragment"> What is data trasnfer? </span> </p>
+						<p><span class="fragment"> Just moving blocks around... </span> </p>
+						<p><span class="fragment"> Copy, synchronize, share</span> </p>
+					</section>
+
+					<section>
+							<h2> Files, Objects, Datasets </h2>
+						<p><span class="fragment"> Data - Blocks</span> </p>
+						<p><span class="fragment"> Metadata - attributes++ </span> </p>
+						<p><span class="fragment"> Dataset - related set of data objects</span> </p>
+					</section>
+
+					<section>
+							<h2> Files, Objects, Datasets </h2>
+						<p><span class="fragment"> Data - Blocks</span> </p>
+						<p><span class="fragment"> Metadata - attributes++ </span> </p>
+						<p><span class="fragment"> Dataset - related set of data objects</span> </p>
+					</section>
+
 				</section>
 
 				<section>
