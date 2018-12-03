@@ -51,25 +51,88 @@
 				<section>
 					<section>
 						<h2> Data Transfer </h2>
-						<p><span class="fragment"> What is data trasnfer? </span> </p>
 						<p><span class="fragment"> Just moving blocks around... </span> </p>
-						<p><span class="fragment"> Copy, synchronize, share</span> </p>
+						<p><span class="fragment"> Reliable, efficient, understandable </span> </p>
+						<p><span class="fragment"> Automated, programmable, secure </span> </p>
+						<p><span class="fragment"> Objects, files, data sets </span> </p>
+						<p><span class="fragment"> Copy, synchronize, migrate, publish</span> </p>
 					</section>
 
 					<section>
-							<h2> Files, Objects, Datasets </h2>
-						<p><span class="fragment"> Data - Blocks</span> </p>
-						<p><span class="fragment"> Metadata - attributes++ </span> </p>
-						<p><span class="fragment"> Dataset - related set of data objects</span> </p>
+							<h2> Complications </h2>
+						<p><span class="fragment"> Cross platform, architecture, storage </span> </p>
+						<p><span class="fragment"> Network infrastructure/protocols </span> </p>
+						<p><span class="fragment"> Application integration - APIs </span> </p>
+						<p><span class="fragment"> Push, pull, 3rd-party managed </span> </p>
 					</section>
 
 					<section>
-							<h2> Files, Objects, Datasets </h2>
-						<p><span class="fragment"> Data - Blocks</span> </p>
-						<p><span class="fragment"> Metadata - attributes++ </span> </p>
-						<p><span class="fragment"> Dataset - related set of data objects</span> </p>
+						<h2> More Complications</h2>
+						<p><span class="fragment"> Regulatory - HIPAA, GRPD </span> </p>
+						<p><span class="fragment"> Crossing administrative boundaries </span> </p>
+						<p><span class="fragment"> Ease of deployment and use</span> </p>
+						<p><span class="fragment"> Control, telemetry, monitoring, auditing </span> </p>
 					</section>
 
+					<section>
+						<h2> Tool Fatigue</h2>
+						<p><span class="fragment"> Literally thousands of tool options </span> </p>
+						<p><span class="fragment"> scp, globus, box, AWS, rsync, ftp, </span> </p>
+						<p><span class="fragment"> No universal solution</span> </p>
+						<p><span class="fragment"> Near zero compatibility </span> </p>
+						<p><span class="fragment"> How to choose? </span> </p>
+					</section>
+
+				</section>
+
+				<section>
+
+					<section>
+						<h2> 1. Understand the data</h2>
+						<p><span class="fragment"> Size, format, and number of objects </span> </p>
+						<p><span class="fragment"> The V's: Velocity, volume, and variability </span> </p>
+						<p><span class="fragment"> Metadata - what and where is it?</span> </p>
+						<p><span class="fragment"> Compliance and security requirements</span> </p>
+					</section>
+
+					<section>
+						<h2> 2. Understand the workflow </h2>
+						<p><span class="fragment"> Transfer pattern: copy, sync, migrate ...</span> </p>
+						<p><span class="fragment"> Frequency: one-time, regular, continuous etc. <span> </p>
+						<p><span class="fragment"> Data lifetime and retention </span> </p>
+						<p><span class="fragment"> What/where is the controller</span> </p>
+					</section>
+
+					<section>
+						<h2> 3. Understand related needs </h2>
+						<p><span class="fragment"> Monitoring, logging, auditing </p>
+						<p><span class="fragment"> Notifications, status queries </span> </p>
+					</section>
+
+				</section>
+
+				<section>
+
+					<section>
+						<h2> Tools </h2>
+						<p><span class="fragment"> </p>
+						<p><span class="fragment"> Notifications, status queries </span> </p>
+					</section>
+
+
+				</section>
+
+
+						<section>
+				
+							<img "width=90%;" data-src="images/Firefox_Screenshot_2018-01-10T15-54-22.441Z.png">
+						</section>
+						<section>
+							<img "width=90%;" data-src="images/Firefox_Screenshot_2017-12-12T19-14-47.704Z.png">
+						</section>
+						<section>
+							<img "width=90%;" data-src="images/Firefox_Screenshot_2017-10-29T03-22-46.465Z.png">
+						</section>
 				</section>
 
 				<section>
@@ -84,136 +147,6 @@
 							<img "width=90%;" data-src="images/Firefox_Screenshot_2017-10-29T03-22-46.465Z.png">
 						</section>
 				</section>
-
-				<section>
-						<h2>BlueWaters challenges</h2>
-						<p class="fragment">~ 30PB online storage</p>
-						<p class="fragment">~ 300PB nearline storage</p>
-						<p class="fragment">80 endpoint servers</p>
-						<p class="fragment">>3 Tbps aggregate bandwidth</p>
-						<p class="fragment">>1000 users/ 10-100 TB per-day</p>
-				</section>
-
-				<section>
-						<h2>Operational Challanges</h2>
-						<p class="fragment">Users - transfer performance questions</p>
-						<p class="fragment">Collaborators -  performance investigations</p>
-						<p class="fragment">Scale - monitoring 80 nodes @ 40Gbps is hard</p>
-						<p class="fragment">Searching/correlating 50GB of logs - intractible</p>
-						<p class="fragment">Drowning in production - no time to improve</p>
-				</section>
-
-					<section>
-						<h2>Metrics could help?</h2>
-						<p class="fragment">Collect higher-order operational data</p>
-						<p class="fragment">See what the system is doing visually</p>
-						<p class="fragment"> Enable Dashboards and automated alterting</p>
-						<p class="fragment">Enable investigations into problems</p>
-					</section>
-					<section>
-							<h2>Initial Results</h2>
-							<p class="fragment">More powerful than expected</p>
-							<p class="fragment">Able to monitor in detail</p>
-							<p class="fragment">Enable Dashboards and alerts</p>
-							<p class="fragment">Enable investigations into problems</p>
-							<p class="fragment">Became a daily-use go-to tool</p>
-						</section>
-
-					<section>
-					<section>
-						<h2>Understanding Metrics/Logs</h2>
-						<p class="fragment">Logs are an exact account of discrete events </p>
-						<p class="fragment">- A bank statement is a log, precise/auditable</p>
-						<p class="fragment"> Metrics are sampled indicators of performance</p>
-						<p class="fragment"> - A credit score is a metric, an approximate indicator</p>
-						<p class="fragment"> Logs and Metrics are complimentary - use both</p>
-					</section>
-
-					<section>
-						<h2>Monitoring Strategies</h2>
-						<p class="fragment">Resource metrics - apply the USE method</p>
-						<p class="fragment">Utilization, Saturation, Error-rate </p>
-						<p class="fragment">Service metrics - apply the RED method</p>
-						<p class="fragment">Request-rate, Error-rate, Duration-of-request</p>
-					</section>
-				</section>
-
-				<section>
-					<section>
-						<h2>Practical Tooling - Prometheus</h2>
-						<p class="fragment">Best of breed metrics system</p>
-						<p class="fragment">Cloud Native Computing Foundation project</p>
-						<p class="fragment">Golang implementation - efficient and easy </p>
-						<p class="fragment">	Single binary, no packaging or dependencies</p>
-						<p class="fragment">	Simple yaml configuration - 2 file deployment</p>
-					</section>
-
-					<section>
-							<h2>Prometheus Components</h2>
-							<p class="fragment">Prometheus - Time Series Database + Query Language</p>
-							<p class="fragment">Collectors - Tiny, specific, metrics collectors</p>
-							<p class="fragment">100's for OS, DB's, filesystems, languages, logs ...</p>
-							<p class="fragment">Grafana - Graphical Interface for navigation/drill-downs</p>
-							<p class="fragment">Alert Manager - Automated alerts based on metrics</p>
-							<p class="fragment">Primarily tiny tight efficient golang apps</p>
-						</section>
-
-					<section>
-							<h2>Prometheus + globus</h2>
-							<p class="fragment">You can observe a lot by just watching ...</p>
-							<p class="fragment">A few metrics can provide a LOT of insight</p>
-							<p class="fragment">Per DTN and summary endpoint performance</p>
-							<p class="fragment">Per-transfer/per-user information</p>
-							<p class="fragment">Some errors</p>
-						</section>
-				</section>
-
-				<section>
-						<section>
-							<h2>Set</h2>
-							<p class="fragment">Need to count globus events</p>
-							<p class="fragment">No globus metrics endpoint, use syslogs</p>
-							<p class="fragment">Mtail - a syslog scraper</p>
-							<p class="fragment">Regexp line parsing</p>
-							<p class="fragment">Converts fields to metrics/dimensions</p>
-						</section>
-						<section>
-								<h2>gridftp.mtail</h2>
-								<code class="hljs" data-trim><small><pre>
-const M_GRIDFTP_USER /USER=/ + /(?P<gridftp_user>/ + P_WORD + /)/
-const M_GRIDFTP_TASKID /TASKID=/ + /(?P<gridftp_taskid>/ + P_UUID + /)/
-const M_GRIDFTP_STATS /Transfer stats:/ + P_SP + M_GRIDFTP_DATE + P_ANY + M_GRIDFTP_START_TIME + P_SP + M_GRIDFTP_USER + P_ANY + M_GRIDFTP_BUFFER + P_SP + M_GRIDFTP_BLOCK + P_SP + M_GRIDFTP_NBYTES + P_ANY + M_GRIDFTP_TYPE + P_ANY +  M_GRIDFTP_TASKID + P_ENDLN
-...
-
-counter gridftp_transfer_type_sum by gridftp_type
-counter gridftp_xfer_count by hostname, gridftp_pid, gridftp_user, gridftp_taskid, gridftp_type
-counter gridftp_xfer_bytes_count by hostname, gridftp_user, gridftp_taskid, gridftp_type
- ...
-
- // + M_GRIDFTP_STATS {
-	debug["gridftp_xferstats_count"]++
-	gridftp_transfer_type_sum[$gridftp_type]++
-	gridftp_transfers_sum++
-	gridtp_bytes_transferred_sum[$gridftp_type] += $gridftp_nbytes
- }
-
-	</pre></small></code>
-								
-							</section>
-						<section>
-								<h2>Setup - Prometheus</h2>
-								<p class="fragment">So simple - url to mtail(s)</p>
-								<p class="fragment">Scrape globus collector(s) every 15s</p>
-								<p class="fragment">Gives 30 sec visibility - Nyquist</p>
-							</section>
-							<section>
-								<h2>Setup - Grafana</h2>
-								<p class="fragment">Tell it where prometheius URL</p>
-								<p class="fragment">Drag/drop tools onto screens</p>
-								<p class="fragment">Add some queries to get the data</p>
-								<p class="fragment">Save/share the elements/dashboard</p>
-							</section>
-					</section>
 
 						<section>
 							<h2>experiences and recommendations</h2>
