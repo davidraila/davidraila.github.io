@@ -1,1 +1,0 @@
-../reveal.js-3.6.0/Gruntfile.js

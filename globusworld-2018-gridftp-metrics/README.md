@@ -1,1 +1,1 @@
-../reveal.js-3.6.0/README.md
+../reveal.js/README.md
