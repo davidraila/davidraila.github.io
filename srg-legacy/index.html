@@ -40,151 +40,158 @@
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
 
-				<section>
-					<h2>how I got here</h2>
-					<p class="fragment">1985 - Computer Engineering </p>
-					<p class="fragment">1987 - DCS </p>
-					<p class="fragment">1990 - SRG </p>
+		<section>
+			<h2>how I got here</h2>
+			<p class="fragment">1985 - Computer Engineering </p>
+			<p class="fragment">1987 - DCS </p>
+			<p class="fragment">1990 - SRG </p>
 
-					<section>
-						<h2>20+ years of SRG</h2>
-						<p class="fragment">Choices</p>
-						<p class="fragment">Tapestry</p>
-						<p class="fragment">XUnet</p>
-						<p class="fragment">Vosaic</p>
-						<p class="fragment">Gaia</p>
-						<p class="fragment">Mobile Choices</p>
-						<p class="fragment">... many more</p>
-					</section>
+			<section>
+				<h2>20+ years of SRG</h2>
+				<p class="fragment">Choices</p>
+				<p class="fragment">Tapestry</p>
+				<p class="fragment">XUnet</p>
+				<p class="fragment">Vosaic</p>
+				<p class="fragment">Gaia</p>
+				<p class="fragment">Mobile Choices</p>
+				<p class="fragment">... many more</p>
+			</section>
+
+		</section>
+
+		<section>
+			<h2>Choices - Rethinking the Operating System</h2>
+				<p class="fragment">Object Oriented Throughout</p>
+				<p class="fragment">Composable and Customizable</p>
+				<p class="fragment">Architectual framework for Experimentation</p>
+				<p class="fragment">Utilize emerging languages and techniques </p>
+
+			<section>
+				<h2>Operating System</h2>
+				<p class="fragment">Manages cores, memory, network, devices </p>
+				<p class="fragment">Services to applications</p>
+				<p class="fragment">Protection - hardware, system, applications </p>
+			</section>
+
+			<section>
+				<h2>Operating Systems Challenges</h2>
+				<p class="fragment">Huge Code Base</p>
+				<p class="fragment">Large Number of complex algorithms</p>
+				<p class="fragment">Requires advanced programming skills </p>
+				<p class="fragment">Difficult to test and debug</p>
+				<p class="fragment">Unknown behaviors of applications and workloads</p>
+			</section>
+		</section>
+
+		<section>
+			<h2>Choices - Impacts</h2>
+
+				<!-- <section>
+						<p>
+								<small>David Raila - Sr. Engineer NCSA Storage Group/Blue Waters</small>
+						</p>
+						<p>
+					<h2>I'm going to talk about</h2>
+					<p><span class="fragment">My problems</span> <span class="fragment">... I mean challenges...</span></p>
+					<p><span class="fragment">operating large globus endpoints</span> </p>
+					<p><span class="fragment">the tools I used and how they work</span> </p>
+					<p><span class="fragment">and how you can use them too</span> 
+				</section> -->
+			</section>
+
+			<section>
+				<h2>OOP</h2>
+				<!-- <p class="fragment">~ 30PB online storage</p>
+				<p class="fragment">~ 300PB nearline storage</p>
+				<p class="fragment">80 endpoint servers</p>
+				<p class="fragment">>3 Tbps aggregate bandwidth</p>
+				<p class="fragment">>1000 users/ 10-100 TB per-day</p> -->
+			</section>
+
+			<section>
+				<h2>Virtualization</h2>
+			</section>
+
+		</section>
+
+
+			<section>
+				<section>
+					<h2>Set</h2>
+					<p class="fragment">Need to count globus events</p>
+					<p class="fragment">No globus metrics endpoint, use syslogs</p>
+					<p class="fragment">Mtail - a syslog scraper</p>
+					<p class="fragment">Regexp line parsing</p>
+					<p class="fragment">Converts fields to metrics/dimensions</p>
 				</section>
 
 				<section>
-					<h2>Choices - Rethinking the Operating System</h2>
-						<p class="fragment">Object Oriented Throughout</p>
-						<p class="fragment">Composable and Customizable</p>
-                        <p class="fragment">Architectual framework for Experimentation</p>
-						<p class="fragment">Utilize emerging languages and techniques </p>
-
-					<section>
-						<h2>Operating System</h2>
-						<p class="fragment">Manages cores, memory, network, devices </p>
-						<p class="fragment">Services to applications</p>
-						<p class="fragment">Protection - hardware, system, applications </p>
-					</section>
-
-					<section>
-						<h2>Operating Systems Challenges</h2>
-						<p class="fragment">Huge Code Base</p>
-						<p class="fragment">Large Number of complex algorithms</p>
-						<p class="fragment">Requires advanced programming skills </p>
-						<p class="fragment">Difficult to test and debug</p>
-						<p class="fragment">Unknown behaviors of applications and workloads</p>
-					</section>
-
+					<h2>gridftp.mtail</h2>
+					<code class="hljs" data-trim><small><pre>
+debug["gridftp_xferstats_count"]++
+gridftp_transfer_type_sum[$gridftp_type]++
+gridftp_transfers_sum++
+gridtp_bytes_transferred_sum[$gridftp_type] += $gridftp_nbytes
+}
+					</pre></small></code>
 				</section>
 
 				<section>
-					<h2>Choices - Impacts</h2>
-
-					<section>
-							<p>
-									<small>David Raila - Sr. Engineer NCSA Storage Group/Blue Waters</small>
-							</p>
-							<p>
-						<h2>I'm going to talk about</h2>
-						<p><span class="fragment">My problems</span> <span class="fragment">... I mean challenges...</span></p>
-						<p><span class="fragment">operating large globus endpoints</span> </p>
-						<p><span class="fragment">the tools I used and how they work</span> </p>
-						<p><span class="fragment">and how you can use them too</span> 
-					</section>
-
-				<section>
-						<h2>BlueWaters challenges</h2>
-						<p class="fragment">~ 30PB online storage</p>
-						<p class="fragment">~ 300PB nearline storage</p>
-						<p class="fragment">80 endpoint servers</p>
-						<p class="fragment">>3 Tbps aggregate bandwidth</p>
-						<p class="fragment">>1000 users/ 10-100 TB per-day</p>
+						<h2>Setup - Prometheus</h2>
+						<p class="fragment">So simple - url to mtail(s)</p>
+						<p class="fragment">Scrape globus collector(s) every 15s</p>
+						<p class="fragment">Gives 30 sec visibility - Nyquist</p>
 				</section>
 
-	
 				<section>
-						<section>
-							<h2>Set</h2>
-							<p class="fragment">Need to count globus events</p>
-							<p class="fragment">No globus metrics endpoint, use syslogs</p>
-							<p class="fragment">Mtail - a syslog scraper</p>
-							<p class="fragment">Regexp line parsing</p>
-							<p class="fragment">Converts fields to metrics/dimensions</p>
-						</section>
-						<section>
-								<h2>gridftp.mtail</h2>
-								<code class="hljs" data-trim><small><pre>
-const M_GRIDFTP_USER /USER=/ + /(?P<gridftp_user>/ + P_WORD + /)/
-const M_GRIDFTP_TASKID /TASKID=/ + /(?P<gridftp_taskid>/ + P_UUID + /)/
-const M_GRIDFTP_STATS /Transfer stats:/ + P_SP + M_GRIDFTP_DATE + P_ANY + M_GRIDFTP_START_TIME + P_SP + M_GRIDFTP_USER + P_ANY + M_GRIDFTP_BUFFER + P_SP + M_GRIDFTP_BLOCK + P_SP + M_GRIDFTP_NBYTES + P_ANY + M_GRIDFTP_TYPE + P_ANY +  M_GRIDFTP_TASKID + P_ENDLN
-...
+					<h2>Setup - Grafana</h2>
+					<p class="fragment">Tell it where prometheius URL</p>
+					<p class="fragment">Drag/drop tools onto screens</p>
+					<p class="fragment">Add some queries to get the data</p>
+					<p class="fragment">Save/share the elements/dashboard</p>
+				</section>
 
-counter gridftp_transfer_type_sum by gridftp_type
-counter gridftp_xfer_count by hostname, gridftp_pid, gridftp_user, gridftp_taskid, gridftp_type
-counter gridftp_xfer_bytes_count by hostname, gridftp_user, gridftp_taskid, gridftp_type
- ...
+		</section>
 
- // + M_GRIDFTP_STATS {
-	debug["gridftp_xferstats_count"]++
-	gridftp_transfer_type_sum[$gridftp_type]++
-	gridftp_transfers_sum++
-	gridtp_bytes_transferred_sum[$gridftp_type] += $gridftp_nbytes
- }
+		<section>
+			<h2>Thank You - Resources</h2>
+			<p class="fragment">https://github.com/ncsa</p>
+			<p class="fragment">https://prometheus.io/</p>
+			<p class="fragment">https://github.com/google/mtail</p>
+			<p class="fragment">https://github.com/ncsa/endpoint_task_monitor </p>
+			<p class="fragment">https://github.com/ncsa/endpoint_task_errors </p>
+			<p class="fragment">Slides: https://davidraila.github.io/gw18</p>
+		</section>
+							
+		<!-- <section>
+			<h2>experiences and recommendations</h2>
+			<p class="fragment">Scraping logs is OK</p>
+			<p class="fragment">Limited by what's logged</p>
+			<p class="fragment">Detailed GCS metrics would be powerful</p>
+			<p class="fragment">Will be very important - move to components</p>
+		</section> -->
 
-	</pre></small></code>
-								
-							</section>
-						<section>
-								<h2>Setup - Prometheus</h2>
-								<p class="fragment">So simple - url to mtail(s)</p>
-								<p class="fragment">Scrape globus collector(s) every 15s</p>
-								<p class="fragment">Gives 30 sec visibility - Nyquist</p>
-							</section>
-							<section>
-								<h2>Setup - Grafana</h2>
-								<p class="fragment">Tell it where prometheius URL</p>
-								<p class="fragment">Drag/drop tools onto screens</p>
-								<p class="fragment">Add some queries to get the data</p>
-								<p class="fragment">Save/share the elements/dashboard</p>
-							</section>
-					</section>
+		<!-- <section>
+			<h2>Other NCSA GO work</h2>
+			<p class="fragment">GO + Jenkins workflow performance monitor</p>
+			<p class="fragment">Verify GO functionality/performance with a realistic test</p>
+			<p class="fragment">Jenkins manages the workflow</p>
+			<p class="fragment">Using GO python SDK script components</p>
+			<p class="fragment">create Jira issues automatically with GO task/event details</p>
+			<p class="fragment">Catches improper useabuse of BW Globus endpoints</p>
+		</section> -->
 
-						<section>
-							<h2>experiences and recommendations</h2>
-							<p class="fragment">Scraping logs is OK</p>
-							<p class="fragment">Limited by what's logged</p>
-							<p class="fragment">Detailed GCS metrics would be powerful</p>
-							<p class="fragment">Will be very important - move to components</p>
-						</section>
-						<section>
-								<h2>Other NCSA GO work</h2>
-								<p class="fragment">GO + Jenkins workflow performance monitor</p>
-								<p class="fragment">Verify GO functionality/performance with a realistic test</p>
-								<p class="fragment">Jenkins manages the workflow</p>
-								<p class="fragment">Using GO python SDK script components</p>
-								<p class="fragment">create Jira issues automatically with GO task/event details</p>
-								<p class="fragment">Catches improper useabuse of BW Globus endpoints</p>
-							</section>
-						<section>
-								<h2>Thank You - Resources</h2>
-								<p class="fragment">https://github.com/ncsa</p>
-								<p class="fragment">https://prometheus.io/</p>
-								<p class="fragment">https://github.com/google/mtail</p>
-								<p class="fragment">https://github.com/ncsa/endpoint_task_monitor </p>
-								<p class="fragment">https://github.com/ncsa/endpoint_task_errors </p>
-								<p class="fragment">Slides: https://davidraila.github.io/gw18</p>
-
-							</section>
+		<!-- <section>
+			<h2>Thank You - Resources</h2>
+			<p class="fragment">https://github.com/ncsa</p>
+			<p class="fragment">https://prometheus.io/</p>
+			<p class="fragment">https://github.com/google/mtail</p>
+			<p class="fragment">https://github.com/ncsa/endpoint_task_monitor </p>
+			<p class="fragment">https://github.com/ncsa/endpoint_task_errors </p>
+			<p class="fragment">Slides: https://davidraila.github.io/gw18</p>
+		</section> -->
 							
 			
-			</div>
-
 		</div>
 
 		<script src="lib/js/head.min.js"></script>
