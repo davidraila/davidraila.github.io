@@ -39,56 +39,64 @@
 
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
+
 				<section>
-					<h2>Introduction</h2>
-					<p class="fragment">If a picture equals a thousand words... </p>
-					<p class="fragment">What pictures are hiding in globus logs... </p>
-					<p class="fragment">50GB logs per day, 300M log lines</p>
+					<h2>how I got here</h2>
+					<p class="fragment">1985 - Computer Engineering </p>
+					<p class="fragment">1987 - DCS </p>
+					<p class="fragment">1990 - SRG </p>
+
+					<section>
+						<h2>20+ years of SRG</h2>
+						<p class="fragment">Choices</p>
+						<p class="fragment">Tapestry</p>
+						<p class="fragment">XUnet</p>
+						<p class="fragment">Vosaic</p>
+						<p class="fragment">Gaia</p>
+						<p class="fragment">Mobile Choices</p>
+						<p class="fragment">... many more</p>
+					</section>
 				</section>
 
 				<section>
-						<p>
-								<small>David Raila - Sr. Engineer NCSA Storage Group/Blue Waters</small>
-						</p>
-						<p>
-					<h2>I'm going to talk about</h2>
-					<p><span class="fragment">My problems</span> <span class="fragment">... I mean challenges...</span></p>
-					<p><span class="fragment">operating large globus endpoints</span> </p>
-					<p><span class="fragment">the tools I used and how they work</span> </p>
-					<p><span class="fragment">and how you can use them too</span> 
+					<h2>Choices - Rethinking the Operating System</h2>
+						<p class="fragment">Object Oriented Throughout</p>
+						<p class="fragment">Composable and Customizable</p>
+                        <p class="fragment">Architectual framework for Experimentation</p>
+						<p class="fragment">Utilize emerging languages and techniques </p>
+
+					<section>
+						<h2>Operating System</h2>
+						<p class="fragment">Manages cores, memory, network, devices </p>
+						<p class="fragment">Services to applications</p>
+						<p class="fragment">Protection - hardware, system, applications </p>
+					</section>
+
+					<section>
+						<h2>Operating Systems Challenges</h2>
+						<p class="fragment">Huge Code Base</p>
+						<p class="fragment">Large Number of complex algorithms</p>
+						<p class="fragment">Requires advanced programming skills </p>
+						<p class="fragment">Difficult to test and debug</p>
+						<p class="fragment">Unknown behaviors of applications and workloads</p>
+					</section>
+
 				</section>
 
 				<section>
-						<h2>From 50GB of</h2>
-						<small "style=text-align:left" >
-Oct 11 03:58:42 hpss12 globus-gridftp-server[45623]: dsi[../../../source/module/dsi.c:117]dsi_init: GridFTP HPSS DSI 2.4:  COMMIT: log level 3
-Oct 11 03:58:43 hpss12 globus-gridftp-server[45623]: Transfer stats: DATE=20171011085843.469040 HOST=hpss-md12.ncsa.illinois.edu PROG=globus-gridftp-server NL.EVNT=FTP_INFO START=20171011085842.725508 USER=liska SHARE=0 SHAREE=none FILE="/u/sciteam/liska/project.bady/07042017/TDISKS25A93T45S/dumps515/new_dumpdiag11" BUFFER=87380 BLOCK=262144 NBYTES=311040000 VOLUME=/ STREAMS=1 STRIPES=1 DEST=[141.142.176.66] TYPE=RETR CODE=226 TASKID=97b43ee2-ae0f-11e7-afcf-22000a92523b retrans=0
-Oct 11 03:58:45 hpss12 globus-gridftp-server[45623]: Transfer stats: DATE=20171011085845.011820 HOST=hpss-md12.ncsa.illinois.edu PROG=globus-gridftp-server NL.EVNT=FTP_INFO START=20171011085844.313072 USER=liska SHARE=0 SHAREE=none FILE="/u/sciteam/liska/project.bady/07042017/TDISKS25A93T45S/dumps523/new_dumpdiag6" BUFFER=87380 BLOCK=262144 NBYTES=311040000 VOLUME=/ STREAMS=1 STRIPES=1 DEST=[141.142.176.66] TYPE=RETR CODE=226 TASKID=97b43ee2-ae0f-11e7-afcf-22000a92523b retrans=0
-Oct 11 03:58:46 hpss12 globus-gridftp-server[45623]: Transfer stats: DATE=20171011085846.564444 HOST=hpss-md12.ncsa.illinois.edu PROG=globus-gridftp-server NL.EVNT=FTP_INFO START=20171011085845.837304 USER=liska SHARE=0 SHAREE=none FILE="/u/sciteam/liska/project.bady/07042017/TDISKS25A93T45S/dumps524/new_dumpdiag6" BUFFER=87380 BLOCK=262144 NBYTES=311040000 VOLUME=/ STREAMS=1 STRIPES=1 DEST=[141.142.176.66] TYPE=RETR CODE=226 TASKID=97b43ee2-ae0f-11e7-afcf-22000a92523b retrans=0
-Oct 11 03:58:48 hpss12 globus-gridftp-server[45623]: Transfer stats: DATE=20171011085848.028754 HOST=hpss-md12.ncsa.illinois.edu PROG=globus-gridftp-server NL.EVNT=FTP_INFO START=20171011085847.391681 USER=liska SHARE=0 SHAREE=none FILE="/u/sciteam/liska/project.bady/07042017/TDISKS25A93T45S/dumps529/new_dumpdiag11" BUFFER=87380 BLOCK=262144 NBYTES=311040000 VOLUME=/ STREAMS=1 STRIPES=1 DEST=[141.142.176.66] TYPE=RETR CODE=226 TASKID=97b43ee2-ae0f-11e7-afcf-22000a92523b retrans=0
-Oct 11 03:58:49 hpss12 globus-gridftp-server[45623]: Transfer stats: DATE=20171011085849.599464 HOST=hpss-md12.ncsa.illinois.edu PROG=globus-gridftp-server NL.EVNT=FTP_INFO START=20171011085848.890210 USER=liska SHARE=0 SHAREE=none FILE="/u/sciteam/liska/project.bady/07042017/TDISKS25A93T45S/dumps529/new_dumpdiag12" BUFFER=87380 BLOCK=262144 NBYTES=311040000 VOLUME=/ STREAMS=1 STRIPES=1 DEST=[141.142.176.66] TYPE=RETR CODE=226 TASKID=97b43ee2-ae0f-11e7-afcf-22000a92523b retrans=0
-Oct 11 03:58:50 hpss12 xinetd[11582]: EXIT: gsiftp status=0 pid=45623 duration=8(sec)
-					</small>
-				</section>
+					<h2>Choices - Impacts</h2>
 
-				<section>
-						<section>
-				
-							<img "width=100%;" data-src="images/Firefox_Screenshot_2018-01-10T15-54-22.441Z.png">
-						</section>
-						<section>
-							<img "width=100%;" data-src="images/Firefox_Screenshot_2017-12-12T19-14-47.704Z.png">
-						</section>
-						<section>
-							<img "width=100%;" data-src="images/Firefox_Screenshot_2017-10-29T03-22-46.465Z.png">
-						</section>
-						<section>
-							<img "width=100%;" data-src="images/Firefox_Screenshot_2018-02-13T22-21-19.274Z.png">
-						</section>
-						<section>
-							<img "width=100%;" data-src="images/Firefox_Screenshot_2018-02-21T00-54-09.671Z.png">
-						</section>
-				</section>
+					<section>
+							<p>
+									<small>David Raila - Sr. Engineer NCSA Storage Group/Blue Waters</small>
+							</p>
+							<p>
+						<h2>I'm going to talk about</h2>
+						<p><span class="fragment">My problems</span> <span class="fragment">... I mean challenges...</span></p>
+						<p><span class="fragment">operating large globus endpoints</span> </p>
+						<p><span class="fragment">the tools I used and how they work</span> </p>
+						<p><span class="fragment">and how you can use them too</span> 
+					</section>
 
 				<section>
 						<h2>BlueWaters challenges</h2>
@@ -99,80 +107,7 @@ Oct 11 03:58:50 hpss12 xinetd[11582]: EXIT: gsiftp status=0 pid=45623 duration=8
 						<p class="fragment">>1000 users/ 10-100 TB per-day</p>
 				</section>
 
-				<section>
-						<h2>Operational Challanges</h2>
-						<p class="fragment">Users - transfer performance questions</p>
-						<p class="fragment">Collaborators -  performance investigations</p>
-						<p class="fragment">Scale - monitoring 80 nodes @ 40Gbps is hard</p>
-						<p class="fragment">Searching/correlating 50GB of logs - intractible</p>
-						<p class="fragment">Drowning in production - no time to improve</p>
-				</section>
-
-					<section>
-						<h2>Metrics could help?</h2>
-						<p class="fragment">Collect higher-order operational data</p>
-						<p class="fragment">See what the system is doing visually</p>
-						<p class="fragment"> Enable Dashboards and automated alterting</p>
-						<p class="fragment">Enable investigations into problems</p>
-					</section>
-					<section>
-							<h2>Initial Results</h2>
-							<p class="fragment">More powerful than expected</p>
-							<p class="fragment">Able to monitor in detail</p>
-							<p class="fragment">Enable Dashboards and alerts</p>
-							<p class="fragment">Enable investigations into problems</p>
-							<p class="fragment">Became a daily-use go-to tool</p>
-						</section>
-
-					<section>
-					<section>
-						<h2>Understanding Metrics/Logs</h2>
-						<p class="fragment">Logs are an exact account of discrete events </p>
-						<p class="fragment">- A bank statement is a log, precise/auditable</p>
-						<p class="fragment"> Metrics are sampled indicators of performance</p>
-						<p class="fragment"> - A credit score is a metric, an approximate indicator</p>
-						<p class="fragment"> Logs and Metrics are complimentary - use both</p>
-					</section>
-
-					<section>
-						<h2>Monitoring Strategies</h2>
-						<p class="fragment">Resource metrics - apply the USE method</p>
-						<p class="fragment">Utilization, Saturation, Error-rate </p>
-						<p class="fragment">Service metrics - apply the RED method</p>
-						<p class="fragment">Request-rate, Error-rate, Duration-of-request</p>
-					</section>
-				</section>
-
-				<section>
-					<section>
-						<h2>Practical Tooling - Prometheus</h2>
-						<p class="fragment">Best of breed metrics system</p>
-						<p class="fragment">Cloud Native Computing Foundation project</p>
-						<p class="fragment">Golang implementation - efficient and easy </p>
-						<p class="fragment">	Single binary, no packaging or dependencies</p>
-						<p class="fragment">	Simple yaml configuration - 2 file deployment</p>
-					</section>
-
-					<section>
-							<h2>Prometheus Components</h2>
-							<p class="fragment">Prometheus - Time Series Database + Query Language</p>
-							<p class="fragment">Collectors - Tiny, specific, metrics collectors</p>
-							<p class="fragment">100's for OS, DB's, filesystems, languages, logs ...</p>
-							<p class="fragment">Grafana - Graphical Interface for navigation/drill-downs</p>
-							<p class="fragment">Alert Manager - Automated alerts based on metrics</p>
-							<p class="fragment">Primarily tiny tight efficient golang apps</p>
-						</section>
-
-					<section>
-							<h2>Prometheus + globus</h2>
-							<p class="fragment">You can observe a lot by just watching ...</p>
-							<p class="fragment">A few metrics can provide a LOT of insight</p>
-							<p class="fragment">Per DTN and summary endpoint performance</p>
-							<p class="fragment">Per-transfer/per-user information</p>
-							<p class="fragment">Some errors</p>
-						</section>
-				</section>
-
+	
 				<section>
 						<section>
 							<h2>Set</h2>
